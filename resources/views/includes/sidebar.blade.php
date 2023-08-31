@@ -16,8 +16,8 @@
                     <li class="back-btn">
                         <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
                     </li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="home"></i><span>Dashboard</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Contacts</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('dashboard') }}"><i data-feather="home"></i><span>Dashboard</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('registration.index') }}"><i data-feather="list"></i><span>Pendaftaran</span></a></li>
                 </ul>
             </div>
         <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

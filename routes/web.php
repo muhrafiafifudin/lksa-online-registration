@@ -15,13 +15,30 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__ . '/auth.php';
 
-Route::get('/dashboard', function () {
-    return view('pages.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('pages.dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::get('/', function () {
+//     if (Auth::user()) {
+//         return redirect()->route('dashboard');
+//     }
+//     return view('pages.auth.login');
+// });
 
 Route::get('/', function () {
     if (Auth::user()) {
         return redirect()->route('dashboard');
     }
     return view('pages.auth.login');
+});
+
+Route::group(['middleware' => 'auth'], function () {
+    // Dashboard
+    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+    // Registration
+    Route::group(['prefix' => 'registrasi', 'as' => 'registration.'], function () {
+        Route::get('/', 'App\Http\Controllers\Registration\RegistrationController@index')->name('index');
+        Route::post('/', 'App\Http\Controllers\Registration\RegistrationController@store')->name('store');
+    });
 });
