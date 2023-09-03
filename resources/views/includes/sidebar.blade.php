@@ -18,6 +18,16 @@
                     </li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('dashboard') }}"><i data-feather="home"></i><span>Dashboard</span></a></li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('registration.index') }}"><i data-feather="list"></i><span>Pendaftaran</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Assesmen Anak & OrTu</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Assesmen Anak</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Berita Acara</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Surat Pernyataan</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Kontrak Pelayanan</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Hasil Intervensi</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Form Reunifikasi</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Form Rujukan Anak</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Terminasi</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Berkas Pendukung</span></a></li>
                 </ul>
             </div>
         <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
