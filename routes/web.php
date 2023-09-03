@@ -36,38 +36,26 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function () {
     // Dashboard
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
-    // Registration
-    Route::group(['prefix' => 'registrasi', 'as' => 'registration.'], function () {
-        Route::get('/', 'App\Http\Controllers\Registration\RegistrationController@index')->name('index');
-        Route::post('/', 'App\Http\Controllers\Registration\RegistrationController@store')->name('store');
-    });
+    // Assesmen Pendaftaran
+    Route::resource('pendaftaran', 'App\Http\Controllers\Pendaftaran\PendaftaranController');
     // Assesmen Anak & OrTu
     Route::resource('assesmen-anak-ortu', 'App\Http\Controllers\Form\AssesmenAnakOrtuController');
-
     // Assesmen Anak
     Route::resource('assesmen-anak', 'App\Http\Controllers\Form\AssesmenAnakController');
-
     // Berita Acara
     Route::resource('berita-acara', 'App\Http\Controllers\Form\BeritaAcaraController');
-
     // Surat Pernyataan
     Route::resource('surat-pernyataan', 'App\Http\Controllers\Form\SuratPernyataanController');
-
     // Kontrak Pelayanan
     Route::resource('kontrak-pelayanan', 'App\Http\Controllers\Form\KontrakPelayananController');
-
     // Hasil Intervensi
     Route::resource('hasil-intervensi', 'App\Http\Controllers\Form\HasilIntervensiController');
-
     // Form Reunifikasi
     Route::resource('form-reunifikasi', 'App\Http\Controllers\Form\FormReunifikasiController');
-
     // Rujukan Anak
     Route::resource('rujukan-anak', 'App\Http\Controllers\Form\RujukanAnakController');
-
     // Terminasi
     Route::resource('terminasi', 'App\Http\Controllers\Form\TerminasiController');
-
     // Berkas Pendukung
     Route::resource('berkas-pendukung', 'App\Http\Controllers\Form\BerkasPendukungController');
 });
