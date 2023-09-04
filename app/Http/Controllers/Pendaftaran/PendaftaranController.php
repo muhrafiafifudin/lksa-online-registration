@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Pendaftaran;
 
-use App\Http\Controllers\Controller;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Crypt;
 
 class PendaftaranController extends Controller
 {
@@ -14,7 +16,9 @@ class PendaftaranController extends Controller
      */
     public function index()
     {
-        return view('pages.pendaftaran.pendaftaran');
+        $siswa = Siswa::all();
+
+        return view('pages.pendaftaran.pendaftaran', compact('siswa'));
     }
 
     /**
@@ -35,7 +39,11 @@ class PendaftaranController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        Siswa::create($data);
+
+        return redirect()->route('pendaftaran.index');
     }
 
     /**
@@ -46,7 +54,11 @@ class PendaftaranController extends Controller
      */
     public function show($id)
     {
-        //
+        $id = Crypt::decrypt($id);
+
+        $siswa = Siswa::findOrFail($id);
+
+        return view('pages.pendaftaran.pendaftaran_detail', compact('siswa'));
     }
 
     /**

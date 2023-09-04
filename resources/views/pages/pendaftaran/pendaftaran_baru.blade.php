@@ -182,7 +182,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <label class="form-label">Penghasilan</label>
-                                        <input class="form-control" type="text" name="penghasilan_ayah" placeholder="Masukkan Penghasilan" required>
+                                        <input class="form-control" type="number" name="penghasilan_ayah" placeholder="Masukkan Penghasilan" required>
                                     </div>
                                     <div class="col-md-4">
                                         <label class="form-label">No. Telp</label>
@@ -253,7 +253,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <label class="form-label">Penghasilan</label>
-                                        <input class="form-control" type="text" name="penghasilan_ibu" placeholder="Masukkan Penghasilan" required>
+                                        <input class="form-control" type="number" name="penghasilan_ibu" placeholder="Masukkan Penghasilan" required>
                                     </div>
                                     <div class="col-md-4">
                                         <label class="form-label">No. Telp</label>
@@ -324,7 +324,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <label class="form-label">Penghasilan</label>
-                                        <input class="form-control" type="text" name="penghasilan_wali" placeholder="Masukkan Penghasilan">
+                                        <input class="form-control" type="number" name="penghasilan_wali" placeholder="Masukkan Penghasilan">
                                     </div>
                                     <div class="col-md-4">
                                         <label class="form-label">No. Telp</label>
