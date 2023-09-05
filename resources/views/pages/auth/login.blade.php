@@ -49,7 +49,7 @@
         <section>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-7"><img class="bg-img-cover bg-center" src="../assets/images/login/2.jpg"
+                    <div class="col-xl-7"><img class="bg-img-cover bg-center" src="{{ asset('assets/images/background/container.jpg') }}"
                             alt="looginpage"></div>
                     <div class="col-xl-5 p-0">
                         <div class="login-card">
@@ -57,8 +57,8 @@
                                 @csrf
                                 @method('POST')
 
-                                <h4>Login</h4>
-                                <h6>Welcome back! Log in to your account.</h6>
+                                <h4>Login Sistem</h4>
+                                <h6>Selamat Datang! Silahkan login akun anda.</h6>
                                 <div class="form-group">
                                     <label>Email Address</label>
                                     <div class="input-group"><span class="input-group-text"><i class="icon-email"></i></span>
@@ -75,18 +75,6 @@
                                 <div class="form-group">
                                     <button class="btn btn-primary btn-block" type="submit">Sign in</button>
                                 </div>
-                                <div class="login-social-title">
-                                    <h5>Sign in with</h5>
-                                </div>
-                                <div class="form-group">
-                                    <ul class="login-social">
-                                        <li><a href="https://www.linkedin.com/login" target="_blank"><i data-feather="linkedin"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" target="_blank"><i data-feather="twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login" target="_blank"><i data-feather="facebook"></i></a></li>
-                                        <li><a href="https://www.instagram.com/login" target="_blank"><i data-feather="instagram"> </i></a></li>
-                                    </ul>
-                                </div>
-                                <p>Don't have account?<a class="ms-2" href="sign-up.html">Create Account</a></p>
                             </form>
                         </div>
                     </div>
