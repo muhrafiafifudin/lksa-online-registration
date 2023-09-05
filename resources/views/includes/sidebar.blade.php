@@ -18,7 +18,7 @@
                     </li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('dashboard') }}"><i data-feather="home"></i><span>Dashboard</span></a></li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('pendaftaran.index') }}"><i data-feather="list"></i><span>Pendaftaran</span></a></li>
-                    <li class="sidebar-main-title">
+                    {{-- <li class="sidebar-main-title">
                         <div>
                             <h6>Assesmen</h6>
                         </div>
@@ -32,7 +32,13 @@
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Form Reunifikasi</span></a></li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Form Rujukan Anak</span></a></li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Terminasi</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Berkas Pendukung</span></a></li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Berkas Pendukung</span></a></li> --}}
+                    <li class="sidebar-main-title">
+                        <div>
+                            <h6>Sistem</h6>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('pengguna.index') }}"><i data-feather="list"></i><span>Pengguna</span></a></li>
                 </ul>
             </div>
         <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

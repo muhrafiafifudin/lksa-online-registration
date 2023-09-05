@@ -58,4 +58,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('terminasi', 'App\Http\Controllers\Form\TerminasiController');
     // Berkas Pendukung
     Route::resource('berkas-pendukung', 'App\Http\Controllers\Form\BerkasPendukungController');
+    // Pengguna
+    Route::resource('pengguna', 'App\Http\Controllers\Sistem\PenggunaController');
 });
