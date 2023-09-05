@@ -53,9 +53,16 @@
                                             <td>{{ $no++ }}</td>
                                             <td>{{ $data->nama_siswa }}</td>
                                             <td>
-                                                <a href="#" class="btn btn-primary">Edit</a>
+                                                <form action="{{ route('pendaftaran.destroy', \Crypt::encrypt($data->id)) }}" method="POST" id="delete-form">
+                                                    @csrf
+                                                    @method('DELETE')
+
+                                                </form>
+
+                                                <a href="{{ route('pendaftaran.edit', \Crypt::encrypt($data->id)) }}" class="btn btn-primary">Edit</a>
                                                 <a href="{{ route('pendaftaran.show', \Crypt::encrypt($data->id)) }}" class="btn btn-primary">View</a>
-                                                <a href="{{ route('pendaftaran.create') }}" class="btn btn-primary">Hapus</a>
+
+                                                <a class="btn btn-primary" onclick="event.preventDefault(); document.getElementById('delete-form').submit();">Hapus</a>
                                             </td>
                                         </tr>
                                     @endforeach

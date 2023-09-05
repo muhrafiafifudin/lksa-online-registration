@@ -69,7 +69,11 @@ class PendaftaranController extends Controller
      */
     public function edit($id)
     {
-        //
+        $id = Crypt::decrypt($id);
+
+        $siswa = Siswa::findOrFail($id);
+
+        return view('pages.pendaftaran.pendaftaran_edit', compact('siswa'));
     }
 
     /**
@@ -81,7 +85,14 @@ class PendaftaranController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $id = Crypt::decrypt($id);
+
+        $data = $request->all();
+
+        $siswa = Siswa::findOrFail($id);
+        $siswa->update($data);
+
+        return redirect()->route('pendaftaran.index');
     }
 
     /**
@@ -92,6 +103,11 @@ class PendaftaranController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $id = Crypt::decrypt($id);
+
+        $siswa = Siswa::findOrFail($id);
+        $siswa->delete();
+
+        return redirect()->route('pendaftaran.index');
     }
 }
