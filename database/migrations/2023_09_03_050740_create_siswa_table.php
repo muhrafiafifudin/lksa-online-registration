@@ -71,6 +71,7 @@ return new class extends Migration
             $table->text('alamat_wali')->nullable();
             $table->tinyInteger('keberadaan_wali')->comment('1 = Masih Hidup, 2 = Meninggal, 3 = Tidak Diketahui')->nullable();
             $table->string('catatan_khusus_wali')->nullable();
+            $table->string('status')->default(0)->comment('1 = Menunggu, 2 = Diterima, 3 = Tidak Diterima');
             $table->timestamps();
         });
     }

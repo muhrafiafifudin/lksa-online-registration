@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
 @section('title')
-    Daftar Siswa
+    Daftar Calon Penerima Manfaat
 @endsection
 
 @section('content')
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-header">
-                <h3>Daftar Siswa</h3>
+                <h3>Daftar Calon Penerima Manfaat</h3>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                         <a href="{{ route('dashboard') }}">Dashboard</a>
                     </li>
-                    <li class="breadcrumb-item active">Daftar Siswa</li>
+                    <li class="breadcrumb-item active">Daftar Calon Penerima Manfaat</li>
                 </ol>
             </div>
         </div>
@@ -26,12 +26,12 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h5>Daftar Siswa</h5>
+                                    <h5>Daftar Calon Penerima Manfaat</h5>
                                     <span>Detail data diri dari semua siswa yang mendaftar</span>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="text-end">
-                                        <a href="{{ route('pendaftaran.create') }}" class="btn btn-primary">Tambah Siswa Baru</a>
+                                        <a href="{{ route('pendaftaran.create') }}" class="btn btn-primary">Tambah Calon Penerima Manfaat</a>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                                 <thead>
                                     <tr>
                                         <th>No.</th>
-                                        <th>Nama Siswa</th>
+                                        <th>Nama Calon Penerima Manfaat</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>

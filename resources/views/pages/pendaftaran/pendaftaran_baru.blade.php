@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('title')
-    Pendaftaran Baru
+    Pendaftaran Calon Penerima Manfaat
 @endsection
 
 @section('content')
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-header">
-                <h3>Pendaftaran Siswa Baru</h3>
+                <h3>Pendaftaran Calon Penerima Manfaat</h3>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                         <a href="{{ route('dashboard') }}">Dashboard</a>
                     </li>
                     <li class="breadcrumb-item">Pendaftaran</li>
-                    <li class="breadcrumb-item active">Pendaftaran Baru</li>
+                    <li class="breadcrumb-item active">Pendaftaran Calon Penerima Manfaat</li>
                 </ol>
             </div>
         </div>
@@ -25,7 +25,7 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5>Pendaftaran Siswa Baru</h5>
+                            <h5>Pendaftaran Calon Penerima Manfaat</h5>
                             <span>Lengkapi form dibawah ini untuk mengisi semua data yang diperlukan dalam pendaftaran</span>
                         </div>
                         <div class="card-body">
@@ -118,10 +118,11 @@
                                         <label class="form-label">Kategori Permasalahan</label>
                                         <select class="form-select" name="masalah_anak" required>
                                             <option selected disabled>Pilih Permasalahan</option>
-                                            <option value="1">Anak Terlantar/Anak Jalanan</option>
-                                            <option value="2">Anak Balita Terlantar</option>
-                                            <option value="3">ABH</option>
-                                            <option value="4">AMPK</option>
+                                            <option value="1">Anak Kurang Mampu</option>
+                                            <option value="2">Anak Yatim</option>
+                                            <option value="3">Anak Piatu</option>
+                                            <option value="4">Anak Yatim Piatu</option>
+                                            <option value="5">Anak Terlantar</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">

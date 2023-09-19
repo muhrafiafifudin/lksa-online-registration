@@ -4,9 +4,9 @@
             <span class="badge badge-primary">New</span>
         </div>
         <a href="user-profile.html">
-            <h6 class="mt-3 f-14 f-w-600">Emay Walter</h6>
+            <h6 class="mt-3 f-14 f-w-600">{{ Auth::user()->name }}</h6>
         </a>
-        <p class="mb-0 font-roboto">Human Resources Department</p>
+        <p class="mb-0 font-roboto">{{ Auth::user()->email }}</p>
     </div>
     <nav>
         <div class="main-navbar">
@@ -33,12 +33,15 @@
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Form Rujukan Anak</span></a></li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Terminasi</span></a></li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Berkas Pendukung</span></a></li> --}}
-                    <li class="sidebar-main-title">
-                        <div>
-                            <h6>Sistem</h6>
-                        </div>
-                    </li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('pengguna.index') }}"><i data-feather="list"></i><span>Pengguna</span></a></li>
+
+                    @role('admin')
+                        <li class="sidebar-main-title">
+                            <div>
+                                <h6>Sistem</h6>
+                            </div>
+                        </li>
+                        <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('pengguna.index') }}"><i data-feather="list"></i><span>Pengguna</span></a></li>
+                    @endrole
                 </ul>
             </div>
         <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

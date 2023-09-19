@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('title')
-    Edit Detail Siswa
+    Edit Detail Calon Penerima Manfaat
 @endsection
 
 @section('content')
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-header">
-                <h3>Detail Siswa</h3>
+                <h3>Detail Calon Penerima Manfaat</h3>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                         <a href="{{ route('dashboard') }}">Dashboard</a>
                     </li>
                     <li class="breadcrumb-item">Pendaftaran</li>
-                    <li class="breadcrumb-item active">Edit Detail Siswa</li>
+                    <li class="breadcrumb-item active">Edit Detail Calon Penerima Manfaat</li>
                 </ol>
             </div>
         </div>
@@ -25,8 +25,8 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5>Edit Detail Siswa</h5>
-                            <span>Edit detail siswa yang telah mendaftakna diri</span>
+                            <h5>Edit Detail Calon Penerima Manfaat</h5>
+                            <span>Edit detail calon penerima manfaat yang telah mendaftakna diri</span>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('pendaftaran.update', \Crypt::encrypt($siswa->id)) }}" method="POST">
@@ -119,10 +119,11 @@
                                         <label class="form-label">Kategori Permasalahan</label>
                                         <select class="form-select" name="masalah_anak">
                                             <option selected disabled>Pilih Permasalahan</option>
-                                            <option value="1" {{ $siswa->masalah_anak == 1 ? 'selected' : '' }}>Anak Terlantar/Anak Jalanan</option>
-                                            <option value="2" {{ $siswa->masalah_anak == 2 ? 'selected' : '' }}>Anak Balita Terlantar</option>
-                                            <option value="3" {{ $siswa->masalah_anak == 3 ? 'selected' : '' }}>ABH</option>
-                                            <option value="4" {{ $siswa->masalah_anak == 4 ? 'selected' : '' }}>AMPK</option>
+                                            <option value="1" {{ $siswa->masalah_anak == 1 ? 'selected' : '' }}>Anak Kurang Mampu</option>
+                                            <option value="2" {{ $siswa->masalah_anak == 2 ? 'selected' : '' }}>Anak Yatim</option>
+                                            <option value="3" {{ $siswa->masalah_anak == 3 ? 'selected' : '' }}>Anak Piatu</option>
+                                            <option value="4" {{ $siswa->masalah_anak == 4 ? 'selected' : '' }}>Anak Yatim Piatu</option>
+                                            <option value="5" {{ $siswa->masalah_anak == 5 ? 'selected' : '' }}>Anak Terlantar</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
