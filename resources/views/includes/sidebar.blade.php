@@ -6,7 +6,7 @@
         <a href="user-profile.html">
             <h6 class="mt-3 f-14 f-w-600">{{ Auth::user()->name }}</h6>
         </a>
-        <p class="mb-0 font-roboto">{{ Auth::user()->email }}</p>
+        <p class="mb-0 font-roboto">LKSA Panti Asuhan Keluarga Yatim Aisyiyah Bekonang</p>
     </div>
     <nav>
         <div class="main-navbar">

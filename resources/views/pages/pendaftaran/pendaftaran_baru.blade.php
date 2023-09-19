@@ -348,7 +348,7 @@
                                     </div>
                                 </div>
 
-                                <button class="btn btn-primary mt-5" type="submit">Tambah Siswa Baru</button>
+                                <button class="btn btn-primary mt-5" type="submit">Tambah Calon Penerima Manfaat</button>
                             </form>
                         </div>
                     </div>
