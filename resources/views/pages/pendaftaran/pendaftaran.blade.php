@@ -32,6 +32,7 @@
                                 <div class="col-sm-6">
                                     <div class="text-end">
                                         <a href="{{ route('pendaftaran.create') }}" class="btn btn-primary">Tambah Calon Penerima Manfaat</a>
+                                        <a href="{{ route('download', ['file' => 'Formulir LKSA.doc']) }}" class="btn btn-primary">Download Formulir</a>
                                     </div>
                                 </div>
                             </div>

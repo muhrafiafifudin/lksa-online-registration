@@ -6,6 +6,7 @@ use App\Models\Siswa;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Response;
 
 class PendaftaranController extends Controller
 {
@@ -109,5 +110,11 @@ class PendaftaranController extends Controller
         $siswa->delete();
 
         return redirect()->route('pendaftaran.index');
+    }
+
+    public function download($file)
+    {
+        $path = public_path('assets/document/' . $file);
+        return Response::download($path);
     }
 }

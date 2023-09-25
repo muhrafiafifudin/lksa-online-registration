@@ -60,4 +60,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('berkas-pendukung', 'App\Http\Controllers\Form\BerkasPendukungController');
     // Pengguna
     Route::resource('pengguna', 'App\Http\Controllers\Sistem\PenggunaController');
+
+    // Download Formulir
+    Route::get('download/{file}', 'App\Http\Controllers\Pendaftaran\PendaftaranController@download')->name('download');
 });
