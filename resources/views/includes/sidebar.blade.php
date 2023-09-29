@@ -1,5 +1,5 @@
 <header class="main-nav">
-    <div class="sidebar-user text-center"><img class="img-90 rounded-circle" src="../assets/images/dashboard/1.png" alt="">
+    <div class="sidebar-user text-center"><img class="img-90 rounded-circle" src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
         <div class="badge-bottom">
             <span class="badge badge-primary">New</span>
         </div>
