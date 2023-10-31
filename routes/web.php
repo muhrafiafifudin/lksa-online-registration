@@ -61,6 +61,23 @@ Route::group(['middleware' => 'auth'], function () {
     // Pengguna
     Route::resource('pengguna', 'App\Http\Controllers\Sistem\PenggunaController');
 
+    // Diterima
+    Route::get('/pendaftaran-diterima', 'App\Http\Controllers\Pendaftaran\DiterimaController@index')->name('diterima.index');
+    Route::match(['put', 'patch'], '/pendaftaran-diterima/diterima/{id}', 'App\Http\Controllers\Pendaftaran\DiterimaController@diterima')->name('diterima.update-diterima');
+    Route::match(['put', 'patch'], '/pendaftaran-diterima/tidak-diterima/{id}', 'App\Http\Controllers\Pendaftaran\DiterimaController@tidak_diterima')->name('diterima.update-tidak-diterima');
+
     // Download Formulir
     Route::get('download/{file}', 'App\Http\Controllers\Pendaftaran\PendaftaranController@download')->name('download');
+
+    // Route Laporan
+    Route::group(['prefix' => 'laporan', 'as' => 'laporan.'], function () {
+        // Semua Data
+        Route::get('/semua-data', 'App\Http\Controllers\Laporan\SemuaDataController@index')->name('semua-data');
+        Route::post('/semua-data', 'App\Http\Controllers\Laporan\SemuaDataController@print_pdf')->name('print-semua-data');
+        // Data Diterima
+        Route::get('/diterima-pdf', 'App\Http\Controllers\Laporan\DiterimaController@index_pdf')->name('diterima-pdf');
+        Route::post('/diterima-pdf', 'App\Http\Controllers\Laporan\DiterimaController@print_pdf')->name('print-diterima-pdf');
+        Route::get('/diterima-excel', 'App\Http\Controllers\Laporan\DiterimaController@index_excel')->name('diterima-excel');
+        Route::post('/diterima-excel', 'App\Http\Controllers\Laporan\DiterimaController@print_excel')->name('print-diterima-excel');
+    });
 });

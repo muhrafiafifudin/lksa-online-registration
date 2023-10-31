@@ -18,29 +18,28 @@
                     </li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('dashboard') }}"><i data-feather="home"></i><span>Dashboard</span></a></li>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('pendaftaran.index') }}"><i data-feather="list"></i><span>Pendaftaran</span></a></li>
-                    {{-- <li class="sidebar-main-title">
-                        <div>
-                            <h6>Assesmen</h6>
-                        </div>
-                    </li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Assesmen Anak & OrTu</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Assesmen Anak</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Berita Acara</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Surat Pernyataan</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Kontrak Pelayanan</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Hasil Intervensi</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Form Reunifikasi</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Form Rujukan Anak</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Terminasi</span></a></li>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="#"><i data-feather="list"></i><span>Berkas Pendukung</span></a></li> --}}
 
                     @role('admin')
+                        <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('diterima.index') }}"><i data-feather="list"></i><span>Diterima</span></a></li>
                         <li class="sidebar-main-title">
                             <div>
                                 <h6>Sistem</h6>
                             </div>
                         </li>
                         <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('pengguna.index') }}"><i data-feather="list"></i><span>Pengguna</span></a></li>
+                        <li class="sidebar-main-title">
+                            <div>
+                                <h6>Laporan PDF</h6>
+                            </div>
+                        </li>
+                        <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('laporan.semua-data') }}"><i data-feather="list"></i><span>Laporan Data Pendaftar</span></a></li>
+                        <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('laporan.diterima-pdf') }}"><i data-feather="list"></i><span>Laporan Yang Diterima</span></a></li>
+                        <li class="sidebar-main-title">
+                            <div>
+                                <h6>Laporan Excel</h6>
+                            </div>
+                        </li>
+                        <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{ route('laporan.diterima-excel') }}"><i data-feather="list"></i><span>Laporan Yang Diterima</span></a></li>
                     @endrole
                 </ul>
             </div>

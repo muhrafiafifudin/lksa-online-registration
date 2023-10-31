@@ -45,6 +45,7 @@
                                         <th>No.</th>
                                         <th>Nama Calon Penerima Manfaat</th>
                                         <th>Aksi</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -65,6 +66,25 @@
 
                                                 <a class="btn btn-primary" onclick="event.preventDefault(); document.getElementById('delete-form').submit();">Hapus</a>
                                             </td>
+
+                                            @if ($data->status == 0)
+                                                <td>
+                                                    <form action="{{ route('diterima.update-diterima', \Crypt::encrypt($data->id)) }}" method="POST" id="diterima">
+                                                        @csrf
+                                                        @method('PUT')
+
+                                                    </form>
+
+                                                    <form action="{{ route('diterima.update-tidak-diterima', \Crypt::encrypt($data->id)) }}" method="POST" id="tidak-diterima">
+                                                        @csrf
+                                                        @method('PUT')
+
+                                                    </form>
+
+                                                    <a class="btn btn-primary" onclick="event.preventDefault(); document.getElementById('diterima').submit();">Diterima</a>
+                                                    <a class="btn btn-primary" onclick="event.preventDefault(); document.getElementById('tidak-diterima').submit();">Tidak Diterima</a>
+                                                </td>
+                                            @endif
                                         </tr>
                                     @endforeach
                                 </tbody>
