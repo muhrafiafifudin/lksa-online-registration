@@ -66,6 +66,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::match(['put', 'patch'], '/pendaftaran-diterima/diterima/{id}', 'App\Http\Controllers\Pendaftaran\DiterimaController@diterima')->name('diterima.update-diterima');
     Route::match(['put', 'patch'], '/pendaftaran-diterima/tidak-diterima/{id}', 'App\Http\Controllers\Pendaftaran\DiterimaController@tidak_diterima')->name('diterima.update-tidak-diterima');
 
+    // Upload Data
+    Route::get('/import-data', 'App\Http\Controllers\Pendaftaran\DiterimaController@import_data')->name('import-data');
+    Route::post('/import-data', 'App\Http\Controllers\Pendaftaran\DiterimaController@post_import_data')->name('post-import-data');
+
     // Download Formulir
     Route::get('download/{file}', 'App\Http\Controllers\Pendaftaran\PendaftaranController@download')->name('download');
 

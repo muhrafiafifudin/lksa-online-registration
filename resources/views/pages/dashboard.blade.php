@@ -18,6 +18,11 @@
                                     <h5>Selamat Datang</h5>
                                     <span>Selamat datang di website pendaftaran online</span>
                                 </div>
+                                <div class="col-sm-6">
+                                    <div class="text-end">
+                                        <a href="{{ route('download', ['file' => 'Formulir LKSA.doc']) }}" class="btn btn-primary">Download Formulir</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Pendaftaran;
 
 use App\Models\Siswa;
+use App\Imports\SiswaImport;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Crypt;
 
 class DiterimaController extends Controller
@@ -20,8 +22,6 @@ class DiterimaController extends Controller
     {
         $id = Crypt::decrypt($id);
 
-        dd($id);
-
         $siswa = Siswa::findOrFail($id);
         $siswa->status = 1;
         $siswa->update();
@@ -33,11 +33,21 @@ class DiterimaController extends Controller
     {
         $id = Crypt::decrypt($id);
 
-        dd($id);
-
         $siswa = Siswa::findOrFail($id);
         $siswa->status = 2;
         $siswa->update();
+
+        return redirect()->route('pendaftaran.index');
+    }
+
+    public function import_data()
+    {
+        return view('pages.import_data.import_data');
+    }
+
+    public function post_import_data(Request $request)
+    {
+        Excel::import(new SiswaImport, request()->file('file'));
 
         return redirect()->route('pendaftaran.index');
     }
